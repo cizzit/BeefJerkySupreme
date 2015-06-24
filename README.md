@@ -1,5 +1,7 @@
-# BeefJerkySupreme
+# ABBYY Flexicapture Exception Alerting Service
 Python Service for monitoring Abbyy batches in exception state
+
+Written by Stuart Rowe (stuart@localghost.com.au)
 
 ##Requirements
 - pywin32 - for whichever version of Python you are running (notnecessarily the OS version!)
