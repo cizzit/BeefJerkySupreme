@@ -105,7 +105,9 @@ class DFSSVC(win32serviceutil.ServiceFramework):
                                     for el in exceptions_list:
                                         if project in el['project'] and count != el['count']:
                                             old_count, el['count'] = el['count'], count
-                                            new_exception = True
+                                            if old_count < count:
+                                                # only report if count goes UP
+                                                new_exception = True
                                             logging.info('Exception exists for %s, updating count (%d->%d)' % (
                                                 project,
                                                 old_count,
